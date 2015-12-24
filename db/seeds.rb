@@ -1,7 +1,12 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rake db:seed (or created alongside the db with db:setup).
-#
-# Examples:
-#
-#   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
-#   Mayor.create(name: 'Emanuel', city: cities.first)
+include RandomData
+
+#Create Todos
+50.times do
+    Todo.create!(
+        todo_item:  RandomData.random_sentence
+)
+end
+todos = Todo.all
+
+puts "Seed finished"
+puts "#{Todo.count} Todos created"
