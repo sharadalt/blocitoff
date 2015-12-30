@@ -1,0 +1,20 @@
+
+<div class="boxed">
+  <div id="content">
+    <p>Blocitoff</p>
+    <p>Self destructing Todo Lists</p>
+    <% @todos.each do |todo| %>
+      <div class="media">
+        <div class="media-body">
+          <h4 class="media-heading">
+            <%= link_to todo.todo_item, todo %>
+          </h4>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
+
+
+
+ 
