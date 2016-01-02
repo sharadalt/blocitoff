@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'password_resets/new'
+
   root 'welcome#index'
   
   get 'welcome/index'
@@ -10,4 +12,5 @@ Rails.application.routes.draw do
   resources :sessions, only: [:new, :create, :destroy]
   
   resources :todos
+  resources :password_resets
 end
