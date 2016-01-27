@@ -13,7 +13,7 @@ class SessionsController < ApplicationController
        # cookies[:auth_token] = user.auth_token
       #end
       flash[:notice] = "Welcome, #{user.name}!"
-      redirect_to root_path
+      redirect_to user_todos_path(user)
     else
       flash.now[:alert] = 'Invalid email/password combination'
       render :new

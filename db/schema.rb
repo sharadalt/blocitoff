@@ -11,13 +11,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151231172127) do
+ActiveRecord::Schema.define(version: 20160125191108) do
 
   create_table "todos", force: :cascade do |t|
     t.string   "todo_item"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.integer  "user_id"
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
+    t.integer  "time_duration"
+    t.integer  "finish_status"
   end
+
+  add_index "todos", ["user_id", "created_at"], name: "index_todos_on_user_id_and_created_at"
+  add_index "todos", ["user_id"], name: "index_todos_on_user_id"
 
   create_table "users", force: :cascade do |t|
     t.string   "name"
@@ -28,6 +34,7 @@ ActiveRecord::Schema.define(version: 20151231172127) do
     t.string   "auth_token"
     t.string   "password_reset_token"
     t.datetime "password_reset_sent_at"
+    t.integer  "role"
   end
 
 end

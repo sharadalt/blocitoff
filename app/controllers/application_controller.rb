@@ -4,11 +4,12 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
   include SessionsHelper
   
-  #private
+  private
   
-  #def current_user
-   # @current_user ||= User.find_by_auth_token!(cookies[:auth_token]) if cookies[:auth_token]
-  #end
-  #helper_method :current_user
-  
+  def require_sign_in
+      unless current_user
+        flash[:error] = "You must be logged in to do that"
+        redirect_to new_session_path
+      end
+  end
 end

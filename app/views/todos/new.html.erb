@@ -1,5 +1,6 @@
-<%= form_for @todo do |f| %>
-   <%= f.label :todo_item %>
-   <%= f.text_field :todo_item %>
-   <%= f.submit "Save" %>
- <% end %>
+<h1>New Todo </h1>
+<div class = "row">
+   <div class = "col-md-8">
+       <%= render partial: 'form', locals: {todo: @todo} %>
+   </div>
+</div>

@@ -1,5 +1,8 @@
 class User < ActiveRecord::Base
+  has_many :todos, :dependent => :destroy
+  
   before_save { self.email = email.downcase }
+  before_save { self.role ||= :member }
 
   EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
 
@@ -10,11 +13,13 @@ class User < ActiveRecord::Base
    
   validates :email,
     presence: true,
-    uniqueness: { case_sensitive: false },
+    uniqueness: { case_sensitivity: false },
     length: { minimum: 3, maximum: 100 },
     format: { with: EMAIL_REGEX }
              
   has_secure_password
+  
+  enum role: [:member, :admin]
   
   def send_password_reset
     generate_token(:password_reset_token)
