@@ -5,7 +5,8 @@ class TodosController < ApplicationController
   def index 
     # 2. -> /users/:user_id/todos
     @user = User.find(params[:user_id])
-    @todos = @user.todos
+    @todos = @user.todos.where(finish_status: false)
+    @todo = Todo.new
   end
   
   def show
@@ -53,6 +54,13 @@ class TodosController < ApplicationController
        flash[:error] = "There was an error saving the todo. Please try again."
        render :edit
      end
+  end
+  
+  def complete
+    @todo = Todo.find(params[:todo_id])
+    @todo.finish_status = true
+    @todo.save
+    redirect_to :back
   end
    
    def destroy

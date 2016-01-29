@@ -18,12 +18,17 @@ th, td {
         <th>Todo(click on the todo link to edit/delete) </th>
         <th>Days Left</th> 
         <th>Finish_status</th>
+        <th>Create At</th>
+        <th>Complete</th>
+        <th>Delete</th>
       </tr>
     <% @todos.each do |todo| %>
-     <tr>
-       <td><%= link_to todo.todo_item, [@user, todo] %></td>
+       <td><%= link_to todo.todo_item , [@user, todo] %></td>
        <td><%= todo.time_duration %></td>
        <td><%= todo.finish_status %></td>
+       <td><%= todo.created_at %></td>
+       <td><%= link_to "complete", user_todo_complete_path(@user, todo), method: :patch  %></td>
+       <td><%= link_to "delete", [@user, todo], method: :delete  %></td>
      </tr>
     <% end %>
   </div>
@@ -31,7 +36,8 @@ th, td {
 </table>
 <div class="row">
   <div class="col-md-4">
-    <%= link_to "New", new_user_todo_path(current_user, @todo), class: 'btn btn-success' %>
+    <%= render partial: 'form', locals: {todo: @todo} %>
+    <%#= link_to "New", new_user_todo_path(current_user, @todo), class: 'btn btn-success' %>
   </div>
 </div>
 </body>

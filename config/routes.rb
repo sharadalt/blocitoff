@@ -7,7 +7,9 @@ Rails.application.routes.draw do
   get 'welcome/about'
 
   resources :users, only: [:new, :create, :show, :index] do
-    resources :todos
+    resources :todos do
+      patch "complete"
+    end
   end
   post '/users/confirm' => 'users#confirm'
   
