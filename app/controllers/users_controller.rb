@@ -13,6 +13,7 @@ class UsersController < ApplicationController
     def show
       @user = User.find(params[:id])
       @todos = @user.todos.paginate(page: params[:page])
+      redirect_to user_todos_path(@user)
     end
     
     def confirm

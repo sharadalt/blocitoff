@@ -17,10 +17,6 @@
      <%= f.label :time_duration %>
      <%= f.number_field :time_duration, rows: 8, class: 'form-control', placeholder: "Enter time duration" %>
   <% end %>
-  <%= form_group_tag(todo.errors[:finish_status]) do %>
-     <%= f.label :finish_status %>
-     <%= f.select(:finish_status, [['Yes', 'yes'], ['No', 'no']]) %> 
-  <% end %>
    <div class="form-group">
      <%= f.submit "Save", class: 'btn btn-success' %>
    </div>

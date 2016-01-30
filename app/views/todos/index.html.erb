@@ -12,28 +12,36 @@ th, td {
 </style>
 </head>
 <body>
+<% provide(:title, @user.name) %>
+<div class="row">
+  <aside class="col-md-4">
+    <section class="user_info">
+      <h1>
+        <%= gravatar_for @user %>
+        <%= @user.name %>
+      </h1>
+       <%= @user.name %>
+     </section>
+    </aside> 
+</div>
 <h3>My Todos</h3>
 <table style="width:50%">
       <tr>
-        <th>Todo(click on the todo link to edit/delete) </th>
+        <th>Todo(click link to edit) </th>
         <th>Days Left</th> 
-        <th>Finish_status</th>
-        <th>Create At</th>
-        <th>Complete</th>
-        <th>Delete</th>
+        <th>Complete(click link to delete)</th>
       </tr>
     <% @todos.each do |todo| %>
-       <td><%= link_to todo.todo_item , [@user, todo] %></td>
+      <tr>
+       <td><%= link_to todo.todo_item, edit_user_todo_path(@user, todo), class: 'btn btn-success' %></td>
        <td><%= todo.time_duration %></td>
-       <td><%= todo.finish_status %></td>
-       <td><%= todo.created_at %></td>
-       <td><%= link_to "complete", user_todo_complete_path(@user, todo), method: :patch  %></td>
-       <td><%= link_to "delete", [@user, todo], method: :delete  %></td>
+       <td><%= link_to "complete", [@user, todo], method: :delete  %></td>
      </tr>
     <% end %>
   </div>
 </div>
 </table>
+<h4>Create New Todo</h4>
 <div class="row">
   <div class="col-md-4">
     <%= render partial: 'form', locals: {todo: @todo} %>

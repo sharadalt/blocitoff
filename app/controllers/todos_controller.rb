@@ -5,7 +5,8 @@ class TodosController < ApplicationController
   def index 
     # 2. -> /users/:user_id/todos
     @user = User.find(params[:user_id])
-    @todos = @user.todos.where(finish_status: false)
+    #@todos = @user.todos.where("time_duration > 0")
+    @todos = @user.todos
     @todo = Todo.new
   end
   
@@ -22,7 +23,6 @@ class TodosController < ApplicationController
     @todo = Todo.new
     @todo.todo_item = params[:todo][:todo_item]
     @todo.time_duration = params[:todo][:time_duration]
-    @todo.finish_status = params[:todo][:finish_status]
     @todo.user = current_user
     
     if @todo.save
@@ -44,7 +44,6 @@ class TodosController < ApplicationController
      @todo = Todo.find(params[:id])
      @todo.todo_item = params[:todo][:todo_item]
      @todo.time_duration = params[:todo][:time_duration]
-     @todo.finish_status = params[:todo][:finish_status]
      
  
      if @todo.save
@@ -58,7 +57,7 @@ class TodosController < ApplicationController
   
   def complete
     @todo = Todo.find(params[:todo_id])
-    @todo.finish_status = true
+    @todo.time_duration = 0
     @todo.save
     redirect_to :back
   end
@@ -80,5 +79,5 @@ class TodosController < ApplicationController
        flash[:alert] = "You must be an admin to do that."
        redirect_to @todo
      end
-  end
+   end
 end

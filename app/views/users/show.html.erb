@@ -10,17 +10,4 @@
        <%= @user.name %>
      </section>
     </aside> 
-    <div class="col-md-8">
-      <% if @user.todos.any? %>
-        <h3> My Todos - (<%= @user.todos.count %>)</h3>
-          <% @user.todos.each do |todo| %>
-            <div class="media">
-              <div class="media-body">
-                <h4 class="media-heading">
-                  <%= link_to todo.todo_item, [@user, todo] %>
-                </h4>
-              </div>
-            </div>
-          <% end %>
-      <% end %>
-  </div>
+</div>
