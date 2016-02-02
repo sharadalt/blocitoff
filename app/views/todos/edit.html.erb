@@ -1,7 +1,26 @@
 <h1>Edit Todo</h1>
  <div class="row">
    <div class="col-md-8">
-     <%= render partial: 'form', locals: {todo: @todo } %>
+     <%= form_for [@user, @todo] do |f| %>
+       <% if @todo.errors.any? %>
+         <div class="alert alert-danger">
+           <h4><%= pluralize(todo.errors.count, "error") %>.</h4>
+           <ul>
+             <% todo.errors.full_messages.each do |msg| %>
+               <li><%= msg %></li>
+             <% end %>
+           </ul>
+         </div>
+       <% end %>
+       <%= form_group_tag(@todo.errors[:todo_item]) do %>
+         <%= f.label :todo_item %>
+         <%= f.text_field :todo_item, class: 'form-control', placeholder: "Enter todo" %>
+       <% end %>
+       <div class="form-group">
+         <%= f.submit "Save", class: 'btn btn-success' %>
+       </div>
+     <% end %>
+     <%#= render partial: 'form', locals: {todo: @todo } %>
    </div>
  </div>
  

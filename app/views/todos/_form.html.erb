@@ -13,9 +13,9 @@
      <%= f.label :todo_item %>
      <%= f.text_field :todo_item, class: 'form-control', placeholder: "Enter todo" %>
   <% end %>
-  <%= form_group_tag(todo.errors[:time_duration]) do %>
-     <%= f.label :time_duration %>
-     <%= f.number_field :time_duration, rows: 8, class: 'form-control', placeholder: "Enter time duration" %>
+  <%= form_group_tag(todo.errors[:days_left]) do %>
+     <%= f.label :days_left %>
+     <%= f.number_field :days_left, rows: 8, class: 'form-control', placeholder: "Enter days_left" %>
   <% end %>
    <div class="form-group">
      <%= f.submit "Save", class: 'btn btn-success' %>

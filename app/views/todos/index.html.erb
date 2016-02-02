@@ -25,17 +25,19 @@ th, td {
     </aside> 
 </div>
 <h3>My Todos</h3>
-<table style="width:50%">
+<table style="width:75%">
       <tr>
         <th>Todo(click link to edit) </th>
         <th>Days Left</th> 
         <th>Complete(click link to delete)</th>
+        <th>Create At</th>
       </tr>
     <% @todos.each do |todo| %>
       <tr>
        <td><%= link_to todo.todo_item, edit_user_todo_path(@user, todo), class: 'btn btn-success' %></td>
-       <td><%= todo.time_duration %></td>
+       <td><%= distance_of_time_in_words(todo.created_at + 7.days, Time.now) %></td>
        <td><%= link_to "complete", [@user, todo], method: :delete  %></td>
+       <td><%= todo.created_at %></td>
      </tr>
     <% end %>
   </div>

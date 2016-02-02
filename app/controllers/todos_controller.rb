@@ -5,7 +5,7 @@ class TodosController < ApplicationController
   def index 
     # 2. -> /users/:user_id/todos
     @user = User.find(params[:user_id])
-    #@todos = @user.todos.where("time_duration > 0")
+    #@todos = @user.todos.where("days_left > 0")
     @todos = @user.todos
     @todo = Todo.new
   end
@@ -22,7 +22,7 @@ class TodosController < ApplicationController
   def create
     @todo = Todo.new
     @todo.todo_item = params[:todo][:todo_item]
-    @todo.time_duration = params[:todo][:time_duration]
+    @todo.days_left = params[:todo][:days_left]
     @todo.user = current_user
     
     if @todo.save
@@ -43,7 +43,7 @@ class TodosController < ApplicationController
      @user = User.find(params[:user_id])
      @todo = Todo.find(params[:id])
      @todo.todo_item = params[:todo][:todo_item]
-     @todo.time_duration = params[:todo][:time_duration]
+     @todo.days_left = params[:todo][:days_left]
      
  
      if @todo.save
@@ -57,7 +57,7 @@ class TodosController < ApplicationController
   
   def complete
     @todo = Todo.find(params[:todo_id])
-    @todo.time_duration = 0
+    @todo.days_left = 0
     @todo.save
     redirect_to :back
   end

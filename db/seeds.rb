@@ -19,7 +19,7 @@ users = User.all
 10.times do
     Todo.create!(
         todo_item:  RandomData.random_sentence,
-        time_duration: 7,
+        days_left: 7,
         user: users.sample
 )
 end

@@ -16,9 +16,9 @@ ActiveRecord::Schema.define(version: 20160125191108) do
   create_table "todos", force: :cascade do |t|
     t.string   "todo_item"
     t.integer  "user_id"
-    t.datetime "created_at",    null: false
-    t.datetime "updated_at",    null: false
-    t.integer  "time_duration"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer  "days_left"
   end
 
   add_index "todos", ["user_id", "created_at"], name: "index_todos_on_user_id_and_created_at"
