@@ -6,4 +6,9 @@ module ApplicationHelper
       content_tag :div, capture(&block), class: 'form-group'
     end
   end
+  
+  def header(text)
+    content_for(:header) { text.to_s }
+  end
+
 end

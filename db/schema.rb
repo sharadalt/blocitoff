@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160125191108) do
+ActiveRecord::Schema.define(version: 20160202193038) do
 
   create_table "todos", force: :cascade do |t|
     t.string   "todo_item"
@@ -34,6 +34,7 @@ ActiveRecord::Schema.define(version: 20160125191108) do
     t.string   "password_reset_token"
     t.datetime "password_reset_sent_at"
     t.integer  "role"
+    t.string   "remeber_digest"
   end
 
 end

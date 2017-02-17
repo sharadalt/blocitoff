@@ -10,8 +10,8 @@
     </div>
   <% end %>
   <%= form_group_tag(todo.errors[:todo_item]) do %>
-     <%= f.label :todo_item %>
-     <%= f.text_field :todo_item, class: 'form-control', placeholder: "Enter todo" %>
+    <%= f.label :todo_item %>
+    <%= f.text_field :todo_item, class: 'form-control', placeholder: "Enter todo" %>
   <% end %>
   <%= form_group_tag(todo.errors[:days_left]) do %>
      <%= f.label :days_left %>

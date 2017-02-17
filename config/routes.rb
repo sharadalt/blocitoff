@@ -1,8 +1,9 @@
 Rails.application.routes.draw do
   get 'password_resets/new'
 
-  root 'welcome#index'
+  #root 'welcome#index'
   
+  root 'welcome#welcomeindex'
   get 'welcome/index'
   get 'welcome/about'
 

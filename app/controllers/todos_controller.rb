@@ -1,6 +1,6 @@
 class TodosController < ApplicationController
   before_action :require_sign_in
-  before_action :authorize_user
+  #before_action :authorize_user
   
   def index 
     # 2. -> /users/:user_id/todos
