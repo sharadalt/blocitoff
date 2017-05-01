@@ -8,8 +8,10 @@ To-do lists are lists of items you want to remember, but are not very important 
 get consistently put off. To address the problem of to-do list clutter, we create Blocitoff.
 
 Blocitoff will aim to keep to-do lists manageable by automatically deleting to-do items 
-have not been completed after seven days. 
+that have not been completed after seven days. 
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+To start the application you run it like any other rails application with the command, first start the rails server
+ $ rails s and goto the localhost:3000, to make sure the app is running locally.
+ 
+ For the use case, goto the link, https://sharadalt.github.io/portfolio/blokitoff
 
