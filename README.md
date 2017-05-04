@@ -9,7 +9,7 @@ Blocitoff will aim to keep to-do lists manageable by automatically deleting to-d
 that have not been completed after seven days. 
 
 <h3>Configuration</h3>
-<div class="boxed" style="width:75%;text-align: center;">
+<div class="boxed" style="width:50%;text-align: center;">
     <img src="blocitoff_config_screen.PNG"/>
 </div>
 <br />
