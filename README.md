@@ -1,4 +1,4 @@
-<h2>Blocitoff</h2>
+<h1>Blocitoff</h1>
 
 The application blocitoff, allows users to create self-destructing to-do lists.
 
@@ -8,17 +8,17 @@ get consistently put off. To address the problem of to-do list clutter, we creat
 Blocitoff will aim to keep to-do lists manageable by automatically deleting to-do items 
 that have not been completed after seven days. 
 
-<h3>Use Case </h3>
+<h2>Use Case </h2>
  For the use case, goto the link, https://sharadalt.github.io/portfolio/blokitoff
 
 
-<h3>Configuration</h3>
+<h2>Configuration</h2>
 <div class="boxed" style="width:50%;text-align: center;">
     <img src="blocitoff_config_screen.PNG"/>
 </div>
 <br />
 
-<h3>How to run it </h3>
+<h2>How to run it </h2>
 
 To start the application you run it like any other rails application with the command, first start the rails server
  $ rails s and goto the localhost:3000, to make sure the app is running locally.
