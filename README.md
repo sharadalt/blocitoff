@@ -8,6 +8,10 @@ get consistently put off. To address the problem of to-do list clutter, we creat
 Blocitoff will aim to keep to-do lists manageable by automatically deleting to-do items 
 that have not been completed after seven days. 
 
+<h3>Use Case </h3>
+ For the use case, goto the link, https://sharadalt.github.io/portfolio/blokitoff
+
+
 <h3>Configuration</h3>
 <div class="boxed" style="width:50%;text-align: center;">
     <img src="blocitoff_config_screen.PNG"/>
@@ -23,6 +27,4 @@ To start the application you run it like any other rails application with the co
  
  $ rails s -p $PORT -b $IP
  
- <h3>Use Case </h3>
- For the use case, goto the link, https://sharadalt.github.io/portfolio/blokitoff
-
+ 
