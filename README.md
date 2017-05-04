@@ -19,7 +19,7 @@ that have not been completed after seven days.
 To start the application you run it like any other rails application with the command, first start the rails server
  $ rails s and goto the localhost:3000, to make sure the app is running locally.
  
- On Cloud9, 
+ On Cloud9 running rails is as below: 
  
  $ rails s -p $PORT -b $IP
  
