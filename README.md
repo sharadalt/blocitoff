@@ -1,8 +1,7 @@
 <h3>Blocitoff</h3>
 
-The application blocitoff is the 1st project, I am working on with my mentor Timothy Barnes.
-The application which is going to be built allows users to create self-destructing to-do 
-lists.
+The application blocitoff is the 1st project, I worked on in ruby on rails.
+The application allows users to create self-destructing to-do lists.
 
 To-do lists are lists of items you want to remember, but are not very important and thus 
 get consistently put off. To address the problem of to-do list clutter, we create Blocitoff.
