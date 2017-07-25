@@ -2,10 +2,15 @@
 
   <div class="jumbotron">
     <div class="boxed">
- 
-      <h1>Blocitoff:</h1>
-        <p>A self-destructing to-do list to 
-         keep you focussed on the things that 
-         really matter</p>
+      <%= render "users/logged_in" %>
+      <h1 style="margin-top:120px;">Todo_list:</h1>
+        <p>A self-destructing to-do list </p>
+        <p>To keep you focussed on the things</p>
+        <p>that really matter</p>
+        <% if current_user %>
+          <%= link_to "Start creation", user_todos_path(current_user), class: 'btn btn-primary'%>
+        <% else %>
+          <%= link_to "Login", new_session_path, class: 'btn btn-primary' %>
+        <%end %>
      </div>
   </div>

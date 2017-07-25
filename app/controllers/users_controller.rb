@@ -3,6 +3,10 @@ class UsersController < ApplicationController
   before_action :authorize_user,  except: [:new, :create, :confirm]
   
     def new
+     if current_user
+       flash[:notice] = "You are already logged_in"
+       redirect_to user_todos_path(current_user)
+     end
      @user = User.new
     end
     
@@ -26,7 +30,10 @@ class UsersController < ApplicationController
     end
     
     def create
-
+     if current_user
+       flash[:notice] = "You are already logged_in"
+       redirect_to users_todos_path(current_user)
+     end
      @user = User.new
      @user.name = params[:user][:name]
      @user.email = params[:user][:email]

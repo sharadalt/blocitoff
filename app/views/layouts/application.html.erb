@@ -10,16 +10,6 @@
 <body>
   <div class="jumbotron">
   <div class="container">
-    <ul class="nav navbar">
-      <div class="pull-right user-info">
-        <% if current_user %>
-          <%= current_user.name %> - <%= link_to "Sign Out", session_path(current_user), method: :delete %>
-        <% else %>
-          <%= link_to "Sign In", new_session_path %> or
-          <%= link_to "Sign Up", new_user_path %>
-        <% end %>
-      </div>
-    </ul>
    <p class="notice"><%= notice %></p>
    <p class="alert"><%= alert %></p>
    <%= yield %>

@@ -1,20 +1,23 @@
 
     <div class="boxed">
+      <%= render "users/logged_in" %>
       <div style="width:760px; height:60px;">
-        <h4 style="text-align:left;color:white;">&nbsp;&nbsp;Blocitoff:</h4> <br>
+        <h4 style="text-align:left;color:white;">&nbsp;&nbsp;Todo_list:</h4> <br>
       </div>
       <div style="width:400px; height:200px;float:center;">
-        <h1 style="text-align:left;margin-left:20px">Blocitoff:</h1>
+        <h1 style="text-align:left;margin-left:20px">Todo_list:</h1>
         <p style="text-align:left;margin-left:20px;">A self-destructing to-do list to 
          keep you focussed on the things that 
          really matter</p>
          <p>
-           <%= link_to "Sign Up", new_user_path, class: 'btn btn-primary' %> today!
+           <%= link_to "Sign Up", new_user_path, class: 'btn btn-primary' %> 
+           <%= link_to "Sign In", new_session_path, class: 'btn btn-primary'%>
+           <%= link_to "Get_going", welcome_index_path, class: 'btn btn-primary'%>
          </p>
        </div>
        <br>
       <div style="width:600px; height:100px; margin-left:150px;background-color:#A9A9A9; border: px solid black;">
-        <table style="width: 100%; border: 3px solid black; border-collapse: collapse;text-align:left">
+        <table style="width: 100%; height:100%;border: 3px solid black; border-collapse: collapse;text-align:left">
           <tr>
             <th>Todo</th>
             <th>Days_Left</th>
