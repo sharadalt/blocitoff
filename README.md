@@ -27,4 +27,6 @@ To start the application you run it like any other rails application with the co
  
  $ rails s -p $PORT -b $IP
  
+ And to make sure the app is running, click on preview tab and select 'Preview Running application'.
+ 
  
