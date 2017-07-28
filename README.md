@@ -14,7 +14,7 @@ that have not been completed after seven days.
 
 <h2>Configuration</h2>
 <div class="boxed" style="width:50%;text-align: center;">
-    <img src="blocitoff_config_screen.PNG"/>
+    <img src="blocitioff_config_screen.PNG"/>
 </div>
 <br />
 
