@@ -1,11 +1,11 @@
-<h1>Blocitoff</h1>
+<h1>Todo_list</h1>
 
-The application blocitoff, allows users to create self-destructing to-do lists.
+The application Todo_list, allows users to create self-destructing to-do lists.
 
 To-do lists are lists of items you want to remember, but are not very important and thus 
-get consistently put off. To address the problem of to-do list clutter, we create Blocitoff.
+get consistently put off. To address the problem of to-do list clutter, we create Todo_list.
 
-Blocitoff will aim to keep to-do lists manageable by automatically deleting to-do items 
+Todo_list will aim to keep to-do lists manageable by automatically deleting to-do items 
 that have not been completed after seven days. 
 
 <h2>Use Case </h2>
