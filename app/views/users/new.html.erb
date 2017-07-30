@@ -1,5 +1,5 @@
 <div style="width:600px; height:600px; margin-left:150px;background-color:#D2B48C; border: 3px solid #191970; color:black">
-
+<%= render "users/project_name"%>
 <h2 style="margin-left:40px;">Sign Up</h2>
 
  <div class="row">
@@ -32,7 +32,7 @@
          <%= f.password_field :password_confirmation, style:'margin-left:40px;', class: 'form-control', placeholder: "Enter password confirmation" %>
        <% end %>
        <div class="form-group">
-         <%= f.submit "Sign up", style:'margin-left:40px;', class: 'btn btn-success' %>
+         <%= f.submit "Sign up", style:'margin-left:40px;', class: 'btn btn-primary' %>
        </div>
      <% end %>
    </div>

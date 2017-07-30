@@ -1,7 +1,7 @@
- <div style="width:600px; height:350px; margin-left:150px;background-color:#D2B48C; border: 3px solid #191970; color:black">
-
+ <div style="width:600px; height:500px; margin-left:150px;background-color:#D2B48C; border: 3px solid #191970; color:black">
  <div class="row"> 
    <div class="col-md-8"> 
+     <%= render "users/project_name"%>
      <h2 style="margin-left:40px;">Sign In</h2>
      <%= form_for :session, url: sessions_path do |f|  %>
        <div class="form-group">
@@ -17,7 +17,7 @@
           <%= f.label :remember_me, class: 'checkbox' do %>
             Remember_me <%= f.check_box :remember_me, style:'margin-left:10px;'%>
           <% end %>
-         <%= f.submit "Sign in", class: 'btn btn-success' %>
+         <%= f.submit "Sign in", class: 'btn btn-primary' %>
        </div>
      <% end %>
    </div>
