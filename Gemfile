@@ -11,11 +11,11 @@ source 'https://rubygems.org'
    gem 'rails_12factor'
  end
  
+  group :development, :test do
+    gem 'sqlite3'
+  end
  # #2
  group :development, :test do
-   gem 'taps'
-   gem 'rvm'
-   gem 'sqlite3'
    gem 'rspec-rails', '~> 3.0'
    gem 'shoulda'
    gem 'pry-rails'
@@ -24,6 +24,7 @@ source 'https://rubygems.org'
    gem 'rails_db'
  end
  
+ gem 'haml'
  gem 'faker',                '1.4.2'
  gem 'will_paginate',           '3.0.7'
  gem 'bootstrap-will_paginate', '0.0.10'
@@ -40,3 +41,9 @@ source 'https://rubygems.org'
  gem 'turbolinks'
  gem 'bootstrap-sass'
  gem 'figaro'
+ gem 'devise'
+ gem 'pundit'
+ gem 'stripe'
+ gem 'redcarpet'
+ gem 'receipts'
+ gem 'prawn'
