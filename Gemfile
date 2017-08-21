@@ -13,6 +13,8 @@ source 'https://rubygems.org'
  
  # #2
  group :development, :test do
+   gem 'taps'
+   gem 'rvm'
    gem 'sqlite3'
    gem 'rspec-rails', '~> 3.0'
    gem 'shoulda'
