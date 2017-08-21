@@ -1,22 +1,7 @@
-<!DOCTYPE html>
-<html>
-<head>
-<style>
-table, th, td {
-    border: 1px solid blue;
-    border-collapse: collapse;
-}
-th, td {
-    padding: 5px;
-}
-</style>
-</head>
-<body>
-<div style="width:700px; height:820px; margin-left:150px;background-color:#D2B48C; border: 3px solid #191970; color:black">
-<%= render "users/project_name"%>
-<%= render "users/logged_in" %>
-<h2 style="margin-left:40px;">My Todos</h2>
-<table style="width:75%; margin-left:40px;">
+
+<div class = "row", style="max-width:1200px" >
+<h2>My Todos</h2>
+<table>
       <tr>
         <th>Todo(click link to edit) </th>
         <th>Days Left</th> 
@@ -25,7 +10,7 @@ th, td {
       </tr>
     <% @todos.each do |todo| %>
       <tr>
-       <td><%= link_to todo.todo_item, edit_user_todo_path(@user, todo), style:'background-color:AntiqueWhite;color:black',class: 'btn btn-success' %></td>
+       <td><%= link_to todo.todo_item, edit_user_todo_path(@user, todo) %></td>
        <td><%= distance_of_time_in_words(todo.due_date, Time.now) %></td>
        <td><%= link_to "complete", [@user, todo], method: :delete  %></td>
        <td><%= todo.created_at %></td>
@@ -34,16 +19,11 @@ th, td {
   </div>
 </div>
 </table>
-<h4 style ="margin-left:40px; margin-top:50px;">Create New Todo</h4>
-<div class="row">
-  <div class="col-md-4">
+<h4>Create New Todo</h4>
     <%= render partial: 'form', locals: {todo: @todo} %>
     <%#= link_to "New", new_user_todo_path(current_user, @todo), class: 'btn btn-success' %>
-  </div>
+ 
 </div>
-</div>
-</body>
-</html>
 
 
  

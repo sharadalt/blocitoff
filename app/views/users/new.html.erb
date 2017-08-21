@@ -1,6 +1,6 @@
-<div style="width:600px; height:600px; margin-left:150px;background-color:#D2B48C; border: 3px solid #191970; color:black">
-<%= render "users/project_name"%>
-<h2 style="margin-left:40px;">Sign Up</h2>
+<!--<div style="width:600px; height:600px; margin-left:150px;background-color:#D2B48C; border: 3px solid #191970; color:black"> -->
+
+<h2>Sign Up</h2>
 
  <div class="row">
    <div class="col-md-8">
@@ -16,25 +16,25 @@
          </div>
        <% end %>
        <%= form_group_tag(@user.errors[:name]) do %>
-         <%= f.label :name, style:'margin-left:40px;' %>
-         <%= f.text_field :name, style:'margin-left:40px;', autofocus: true, class: 'form-control', placeholder: "Enter name" %>
+         <%= f.label :name %>
+         <%= f.text_field :name, autofocus: true, class: 'form-control', placeholder: "Enter name" %>
        <% end %>
        <%= form_group_tag(@user.errors[:email]) do %>
-         <%= f.label :email,style:'margin-left:40px;' %>
-         <%= f.email_field :email, style:'margin-left:40px;', class: 'form-control', placeholder: "Enter email" %>
+         <%= f.label :email %>
+         <%= f.email_field :email, class: 'form-control', placeholder: "Enter email" %>
        <% end %>
        <%= form_group_tag(@user.errors[:password]) do %>
-         <%= f.label :password,style:'margin-left:40px;' %>
-         <%= f.password_field :password, style:'margin-left:40px;', class: 'form-control', placeholder: "Enter password" %>
+         <%= f.label :password %>
+         <%= f.password_field :password, class: 'form-control', placeholder: "Enter password" %>
        <% end %>
        <%= form_group_tag(@user.errors[:password_confirmation]) do %>
-         <%= f.label :password_confirmation, style:'margin-left:40px;' %>
-         <%= f.password_field :password_confirmation, style:'margin-left:40px;', class: 'form-control', placeholder: "Enter password confirmation" %>
+         <%= f.label :password_confirmation %>
+         <%= f.password_field :password_confirmation, class: 'form-control', placeholder: "Enter password confirmation" %>
        <% end %>
        <div class="form-group">
-         <%= f.submit "Sign up", style:'margin-left:40px;', class: 'btn btn-primary' %>
+         <%= f.submit "Sign up", class: 'btn btn-primary' %>
        </div>
      <% end %>
    </div>
  </div>
-</div>
+<!--</div> -->
