@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   root 'welcome#welcomeindex'
   get 'welcome/index'
   get 'welcome/about'
-   get 'welcome/help'
+  get 'welcome/help'
 
   resources :users, only: [:new, :create, :show, :index] do
     resources :todos do
