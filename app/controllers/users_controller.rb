@@ -44,7 +44,7 @@ class UsersController < ApplicationController
        flash[:notice] = "Welcome to Todo_list #{@user.name}!"
        create_session(@user)
        # Deliver the signup email
-       UserNotifier.send_signup_email(@user).deliver_now
+       #UserNotifier.send_signup_email(@user).deliver_now
        redirect_to user_todos_path(@user)
      else
        flash.now[:alert] = "There was an error creating your account. Please try again."
